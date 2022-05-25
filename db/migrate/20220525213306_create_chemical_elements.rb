@@ -4,13 +4,13 @@ class CreateChemicalElements < ActiveRecord::Migration[6.1]
 
       t.string :name
       t.string :appearance
-      t.float :atomic_mass
-      t.float :boil
+      t.decimal :atomic_mass
+      t.decimal :boil
       t.string :category
-      t.float :density
+      t.decimal :density
       t.string :discovered_by
-      t.float :melt
-      t.float :molar_heat
+      t.decimal :melt
+      t.decimal :molar_heat
       t.string :named_by
       t.integer :number
       t.integer :period 
@@ -24,12 +24,10 @@ class CreateChemicalElements < ActiveRecord::Migration[6.1]
       t.integer :shells, array:true
       t.string :electron_configuration
       t.string :electron_configuration_semantic
-      t.float :electron_affinity
-      t.float :electronegativity_pauling
-      t.float :ionization_energies, array:true
+      t.decimal :electron_affinity
+      t.decimal :electronegativity_pauling
+      t.decimal :ionization_energies, array:true
       t.string :cpk_hex
-
-      # add_column :log_vzr_searches, :country, :string, array:true, default: []
 
       t.timestamps
     end

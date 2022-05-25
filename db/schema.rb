@@ -12,16 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2022_05_25_213306) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "chemical_elements", force: :cascade do |t|
     t.string "name"
     t.string "appearance"
-    t.float "atomic_mass"
-    t.float "boil"
+    t.decimal "atomic_mass"
+    t.decimal "boil"
     t.string "category"
-    t.float "density"
+    t.decimal "density"
     t.string "discovered_by"
-    t.float "melt"
-    t.float "molar_heat"
+    t.decimal "melt"
+    t.decimal "molar_heat"
     t.string "named_by"
     t.integer "number"
     t.integer "period"
@@ -32,12 +35,12 @@ ActiveRecord::Schema.define(version: 2022_05_25_213306) do
     t.string "symbol"
     t.integer "xpos"
     t.integer "ypos"
-    t.integer "shells"
+    t.integer "shells", array: true
     t.string "electron_configuration"
     t.string "electron_configuration_semantic"
-    t.float "electron_affinity"
-    t.float "electronegativity_pauling"
-    t.float "ionization_energies"
+    t.decimal "electron_affinity"
+    t.decimal "electronegativity_pauling"
+    t.decimal "ionization_energies", array: true
     t.string "cpk_hex"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
