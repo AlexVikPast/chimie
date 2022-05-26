@@ -27,7 +27,7 @@ module Types
     field :electronegativity_pauling, Float, null: true
     field :ionization_energies, [Float], null: true
     field :cpk_hex, String, null: true
-    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
-    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+    # field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+    # field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
 end

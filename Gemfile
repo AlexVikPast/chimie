@@ -57,5 +57,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "graphql"
-gem 'graphiql-rails', group: :development
+# gem 'graphiql-rails', group: :development
+gem 'graphiql-rails'
 gem 'graphql-rails-generators', group: :development
